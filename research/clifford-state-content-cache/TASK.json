@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "task_id": "replay-runtime",
+  "priority_revision": 8,
+  "base_commit": "721c03822c421b7f7fcbb2598993b947c4d88419",
+  "original_card": {
+    "id": "replay-runtime",
+    "question": "Can one measured replay bottleneck be sped up without dropping coverage?",
+    "starting_points": [
+      "scripts/run_isolated_tests.py",
+      "scripts/verify_replay_coverage.py",
+      "certificates/selected-result.json"
+    ],
+    "methods": [
+      "Profile one isolated replay and optimize the measured bottleneck.",
+      "Design source-bound reuse with explicit dependency invalidation and negative controls."
+    ],
+    "acceptance_gate": "Report before/after wall time on the same fixture, retained checks and invalidation behavior.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_selected_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Resolve the current selected review, separate complex/ordinary BIT/admitted BIT/outer budgets, and compare the card against live handoffs before starting. Historical ceilings require exact source/model equivalence.",
+      "scope": "Source-binding orientation only; not a scientific replay or all-size proof. Materialize selected inputs if this checkout is sparse."
+    },
+    "first_experiment": "Measure one unchanged fixture, preserve check coverage, and test one optimization with invalidation controls.",
+    "bottleneck_link": "Faster trustworthy replays increase review throughput and let mechanism candidates be checked sooner.",
+    "allowed_variations": [
+      "Profile one stage or design one source-bound cache boundary."
+    ],
+    "scope_change_triggers": [
+      "Skipping coverage or comparing different fixtures to claim speedup."
+    ],
+    "overlap_terms": [
+      "replay runtime",
+      "cache invalidation",
+      "isolated tests"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Bounded immutable-circuit reuse of exact states in the unchanged PR6030 primary replay.",
+  "scope_change_reason": "The current selected primary replay and pure literal-state boundary make the generic replay-runtime question concrete.",
+  "bottleneck_link": "Avoid repeated pure native-state evaluation while retaining the complete existing consumer, bindings and comparisons.",
+  "budget_minutes": 60,
+  "stop_rule": "Stop after the fixed 512-state experiment and five alternating full-workload pairs; publish the first measured improvement or a precise negative handoff.",
+  "outcome": "negative-result",
+  "evidence": "Five alternating fresh-process pairs pass with identical source and implementation hashes, request counts and complete scientific stdout. Ranges overlap; a full-replay speedup is unestablished. Exact cache controls pass normally and under optimized Python. README records every sample; benchmark.py generates a complete source-bound receipt to an external path.",
+  "author": "Nick Petalas",
+  "ai_assistance": "Independent human and formal proof-kernel review are unclaimed.",
+  "open_questions": [
+    {
+      "question": "Which cost-weighted work is eliminated by the repeated keys?",
+      "why_it_matters": "Exact evaluator-call reductions do not imply the same runtime reduction.",
+      "first_step": "Profile the unchanged gate-table primary and separate key, copying, gate and caller costs.",
+      "blocked_by": "No successful complete cost-weighted profile of this final wrapper is supplied."
+    },
+    {
+      "question": "Does the source-bound timing pattern persist on another host?",
+      "why_it_matters": "A shared-host timing is not a platform-independent result.",
+      "first_step": "Run benchmark.py with the same sources and preserve every sample.",
+      "blocked_by": "No second-host measurement is supplied."
+    }
+  ],
+  "result_claim_type": "Source-bound empirical performance finding, with exact finite cache conformance; no theorem or kappa improvement."
+}

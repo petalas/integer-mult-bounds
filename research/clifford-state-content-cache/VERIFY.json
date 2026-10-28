@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "research/clifford-state-performance/fast_state.py",
+    "research/p104-helper470-twin-rung-removal/EDIT.json.gz",
+    "research/p104-helper470-twin-rung-removal/EXPECT.json",
+    "research/p104-helper470-twin-rung-removal/PRICING-EDITS.json",
+    "research/p104-helper470-twin-rung-removal/SOURCES.json",
+    "research/p104-helper470-twin-rung-removal/WORD.json.gz",
+    "research/p104-helper470-twin-rung-removal/construct.py",
+    "research/p104-helper470-twin-rung-removal/inputs/pr5827-source.tar",
+    "research/p104-helper470-twin-rung-removal/inputs/pr5907-WORD.json.gz",
+    "research/p104-helper470-twin-rung-removal/pricing.py",
+    "research/p104-helper470-twin-rung-removal/sources.py",
+    "research/p104-helper470-twin-rung-removal/test_portability.py",
+    "research/p104-helper470-twin-rung-removal/verify.py",
+    "research/p104-native-channel/vendor/clifford_exact.py",
+    "research/p104-helper470-twin-rung-removal/RESULT.json"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 30,
+      "checks": "Exact cache conformance, fresh results, nested input mutation, dimensions/bases/global phase, eviction, exceptions and all fifteen actual source corruptions."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-O",
+        "-B",
+        "-W",
+        "error",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 30,
+      "checks": "Repeat cache ownership and invalidation controls under optimized Python."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "{package}/run.py",
+        "--mode",
+        "cached"
+      ],
+      "timeout_seconds": 240,
+      "checks": "Run the unchanged complete primary consumer with a bounded literal-circuit state cache and its exact committed expected RESULT; authenticate and preserve all fifteen inputs."
+    },
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "-W",
+        "error",
+        "{package}/run.py",
+        "--mode",
+        "differential"
+      ],
+      "timeout_seconds": 300,
+      "checks": "Compare every cached state answer with a freshly evaluated gate-table state during the complete unchanged primary consumer; retain all original checks and expected RESULT."
+    }
+  ]
+}

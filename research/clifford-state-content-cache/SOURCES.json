@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "base_commit": "721c03822c421b7f7fcbb2598993b947c4d88419",
+  "files": [
+    {
+      "path": "certificates/selected-result.json",
+      "usage": "provenance",
+      "git_blob": "d59b5035e7b4cbaa9d688a1d32dd0d6eb79c466a",
+      "sha256": "9b8d0eea95b3bf0dfcb7938a732a6439b87a2685dec2a5ab9e525b3b34debbfa"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "usage": "provenance",
+      "git_blob": "3404fbdd5e7529a0674eef26114b5071e4586cec",
+      "sha256": "ead6cdc9d0af6d58e8a49744d8ec8c7c15e13d2ba93c276c434bcf9b51b93a81"
+    },
+    {
+      "path": "research/clifford-state-performance/fast_state.py",
+      "usage": "input",
+      "git_blob": "5d546d8a05f6025d58a5133fa0d67ce134993013",
+      "sha256": "2fe087ba4558bd21ca49945dbedaa4047e4170e8fd4e2280701bb2f0481811b5"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/EDIT.json.gz",
+      "usage": "input",
+      "git_blob": "7f2119f2b37644ce750a9c03d31514275513fdfb",
+      "sha256": "89c5166d3368cd0f949930c88a134d984b4f75217b1e6bb1f57829a639726350"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/EXPECT.json",
+      "usage": "input",
+      "git_blob": "0e7201cef95465bb92ede7da07c46438e2357226",
+      "sha256": "1300b39981c7e1a6edafe677f8d606b5be51a658c3516bd70467800674991338"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/PRICING-EDITS.json",
+      "usage": "input",
+      "git_blob": "8e666b6c70f0ded9e39652b372329a8c2220ab55",
+      "sha256": "533cc92bb560950b6a6d97fe333c7ab003da57b49910016bcf97ce3cb2f48fae"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/SOURCES.json",
+      "usage": "input",
+      "git_blob": "5042494d12f4feca59c0ccb156b44dbe75e5a342",
+      "sha256": "efa21202fd0d220df5607f34540e7dd592c694f5d3793704e3fbf760854c775d"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/WORD.json.gz",
+      "usage": "input",
+      "git_blob": "22f9ab02d1b73ea0aa4b07ce445a14cc2602c760",
+      "sha256": "7834725d9e34ee846a9ccc615221ea81e0201613938afa185d2eda0c9a6c232f"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/construct.py",
+      "usage": "input",
+      "git_blob": "dbdbf0e7dd4c0c31e5075a48a7f395633cb82840",
+      "sha256": "1a417a5a858bd6dfac9d74a1f95c7aecc27b51e3eedf0954593004948935f6b6"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/inputs/pr5827-source.tar",
+      "usage": "input",
+      "git_blob": "1e10936044959f81a4c5fcd5bdb7b9e4c060ec8e",
+      "sha256": "7af5908a4d83e83e28f59523fd7494841f669b7295311cfdbc3027fa65c5826d"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/inputs/pr5907-WORD.json.gz",
+      "usage": "input",
+      "git_blob": "7ffe7b500b02b9d0de49a85ec53e36004f1a411f",
+      "sha256": "b69a9cb3a26d4f40aa7ad14f814b188fe16a782999f6f56292538e447d67b284"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/pricing.py",
+      "usage": "input",
+      "git_blob": "65bb723f8558dc60ff92764db1a43d8bf438aa09",
+      "sha256": "3c6cf2966ccfe5a5fb6c90f89f46ac224ea455127e35dd34975683c68c36d710"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/sources.py",
+      "usage": "input",
+      "git_blob": "227794adce372f98ef10eeb22858ee4e5b7046de",
+      "sha256": "ebc01917c2e856e7a1712118d5b7f9e841af174751bb0c56aefb1cbb210d7787"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/test_portability.py",
+      "usage": "input",
+      "git_blob": "e0b2cb071fb3f6fadf7fbe031fdf4d2448790341",
+      "sha256": "15000434e9acd70fff3b606306f8d7d081695ee364df52809f087788c9b3fb8d"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/verify.py",
+      "usage": "input",
+      "git_blob": "6e8585e43ea7f8acbcdec6eec0bf196a2d81cb28",
+      "sha256": "91663e9d34c6bd6da8e52175ea77f9918d4dfa8f960ae0c7b53bbd404226fa4f"
+    },
+    {
+      "path": "research/p104-native-channel/vendor/clifford_exact.py",
+      "usage": "input",
+      "git_blob": "166841a037f069249f6f7f6dedb89248812f59e2",
+      "sha256": "2982ead07721e83358dc67c6f49c2b4c16a236a6bebdfd72f58221be1f5d0962"
+    },
+    {
+      "path": "research/p104-helper470-twin-rung-removal/RESULT.json",
+      "usage": "input",
+      "git_blob": "e4a03118d585fb80c9ac932281b528ac394ccc5f",
+      "sha256": "84fcbe2a0b64307b5703c363408042bdd91555b0419509aa50daa43b3b1924ad"
+    }
+  ]
+}
